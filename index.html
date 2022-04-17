@@ -69,7 +69,7 @@
 
                         // 해당 주소에 대한 좌표를 받아서
                         const coords = new daum.maps.LatLng(result.y, result.x);
-                        console.log(coords,addr)
+                       
                         document.getElementById('LatLng').value = coords
                     }
                 });
@@ -105,6 +105,8 @@
                 document.getElementById("sample2_address").value = addr;
                 // 커서를 상세주소 필드로 이동한다.
                 document.getElementById("sample2_detailAddress").focus();
+                
+                console.log(coords,addr)
                 
 
                 // iframe을 넣은 element를 안보이게 한다.
