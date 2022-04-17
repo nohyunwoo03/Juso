@@ -9,6 +9,7 @@
 <body>
     <div id="map" style="width:500px;height:400px;"></div>
     <input type="text" id="sample5_address" placeholder="주소">
+    <input type="text" id="Lat" placeholder="x좌표">
 <input type="button" onclick="sample5_execDaumPostcode()" value="주소 검색"><br>
 <div id="map" style="width:300px;height:300px;margin-top:10px;display:none"></div>
 
@@ -48,6 +49,7 @@
 
                         // 해당 주소에 대한 좌표를 받아서
                         const coords = new daum.maps.LatLng(result.y, result.x);
+                        document.getElementById("Lat").value = new daum.maps.LatLng(result.x)
                         console.log(coords,addr)
                         // 지도를 보여준다.
                         mapContainer.style.display = "block";
