@@ -56,7 +56,6 @@
                         // 해당 주소에 대한 좌표를 받아서
                         const coords = new daum.maps.LatLng(result.y, result.x);
                        
-                        document.getElementById('LatLng').value = coords
                         console.log(coords,addr)
                         const sendToRN = () => {
                         if (window.ReactNativeWebView) {
