@@ -60,6 +60,17 @@
                        
                         document.getElementById('LatLng').value = coords
                         console.log(coords,addr)
+                        const sendToRN = () => {
+                        if (window.ReactNativeWebView) {
+                         // RN에서 데이터는 반드시 문자열로 받을 수 있기 때문에 
+                         // JSON.stringify를 사용합니다.
+                         window.ReactNativeWebView.postMessage(
+                           JSON.stringify( {LatLat:coords,Ju:addr} )
+                           );
+                          } else {
+                          console.log('hehe')
+                          }
+                       };
                     }
                 });
                 } else { // 사용자가 지번 주소를 선택했을 경우(J)
