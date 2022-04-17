@@ -22,6 +22,8 @@
 <script>
     // 우편번호 찾기 화면을 넣을 element
     var element_layer = document.getElementById('layer');
+    
+    var geocoder = new daum.maps.services.Geocoder();
 
     function closeDaumPostcode() {
         // iframe을 넣은 element를 안보이게 한다.
