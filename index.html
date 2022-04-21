@@ -109,7 +109,10 @@ width: 200px;
                          // RN에서 데이터는 반드시 문자열로 받을 수 있기 때문에 
                           // JSON.stringify를 사용합니다.
                          window.ReactNativeWebView.postMessage(
-                             {coords,addr}
+                             JSON.stringify({
+                                 좌표:coords,
+                                 주소:addr
+                             })
                           );
                            } else {
                            console.log('hehe')
