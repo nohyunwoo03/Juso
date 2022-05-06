@@ -103,7 +103,7 @@ width: 200px;
                         // 해당 주소에 대한 좌표를 받아서
                         const coords = new daum.maps.LatLng(result.y, result.x);
                         
-                        console.log(coords,addr)
+                        console.log(coords,addr,extraAddr)
                         const sendToRN = () => {
                          if (window.ReactNativeWebView) {
                          // RN에서 데이터는 반드시 문자열로 받을 수 있기 때문에 
